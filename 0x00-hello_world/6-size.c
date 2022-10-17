@@ -1,8 +1,7 @@
-#!/bin/bash
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main -Entry point
  * @void: parameter
  * Return: 0 (Sucess)
  */
