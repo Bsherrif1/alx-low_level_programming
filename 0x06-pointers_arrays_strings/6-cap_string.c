@@ -1,35 +1,24 @@
 #include "main.h"
 /**
- * cap_string - capitalizes all words of a string
- * @s: input string.
- * Return: the pointer to dest.
+ * cap_string - capitalizes the words in a string.
+ * @s: the string in question
+ *
+ * Return: the camel string
  */
-
 char *cap_string(char *s)
 {
-	int i = 0;
-
-	while (s[i])
+	int x, y;
+	char seprator[] = " \t\n,;.!?\"(){}";
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		while (!(s[i] >= 'a' && s[i] <= 'z'))
-
-			i++;
-		if (s[i - 1] == ' ' || 
-				s[i - 1] == '\t' ||
-				s[i - 1] == '\n' ||
-				s[i -1] == ',' ||
-				s[i - 1] == ';' ||
-				s[i - 1] == '.' ||
-				s[i - 1] == '!' ||
-				s[i - 1] == '?' || 
-				s[i - 1] == '"' ||
-				s[i - 1] == '(' ||
-				s[i - 1] == ')' ||
-				s[i - 1] == '{' ||
-				s[i - 1] == '}'
-				i == 0)
-			s[i] -= 32;
-		i++;
-
+		for (y = 0; seprator[y] != '\0'; y++)
+		{
+			if (x == 0 || s[x - 1] == seprator[y])
+			{
+				if (s[x] > 97 && s[x] < 123)
+					s[x] -= 32;
+			}
+		}
+	}
 	return (s);
 }
