@@ -1,21 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - single digits
- * Return: Always 0
+ * main - prints numbers from 0 to 9 separated by a comma followed by a space
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int n;
+	int num = '0';
 
-	for (n = 48; n < 58; n++)
+	while (num <= '9')
 	{
-		putchar(n);
-		if (n != 57)
+		putchar(num);
+		if (num != '9')
 		{
 			putchar(',');
 			putchar(' ');
 		}
+		num++;
+	}
 	putchar('\n');
+
 	return (0);
 }
