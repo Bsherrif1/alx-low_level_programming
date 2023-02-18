@@ -1,20 +1,26 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - upper and lower
- * Return: Always 0
+ * main - returns alphabet in both loweer and upper case
+ * Return: returns 0 (successful)
  */
+
 int main(void)
 {
-	char ch;
+	int ch = 'a';
+	int CH = 'A';
 
-	for (ch = 'a'; ch <= 'z'; ch++)
-		purchar(ch);
-
-	for (ch = 'A'; ch <= 'Z'; ch++)
+	while (ch <= 'z')
+	{
 		putchar(ch);
-
+		ch++;
+	}
+	while (CH <= 'Z')
+	{
+		putchar(CH);
+		CH++;
+	}
 	putchar('\n');
-
 	return (0);
 }
